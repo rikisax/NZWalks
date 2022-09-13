@@ -1,0 +1,4 @@
+INSTALL ENTITY FRAMEWORK CORE NUGET PACKAGES
+
+Microsoft.Entityframeworkcore.SqlServer
+Microsoft.Entityframeworkcore.Tools
