@@ -133,6 +133,7 @@ namespace NZWalks.API.Controllers
 
         }
         [HttpDelete]
+        [Route("{id:guid}")]
         public async  Task<IActionResult>  DeleteRegionAsync(Guid id)
         {
             //Get region from database by Delete

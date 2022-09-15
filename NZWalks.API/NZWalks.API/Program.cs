@@ -11,12 +11,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Aggiunto per il progetto NZWalks
 builder.Services.AddDbContext<NZWalksDBContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalks"));
 });
 
+//Services injection (inietto il servizio di Dependency injection)
+//Aggiunto per il progetto NZWalks
 builder.Services.AddScoped<IRegionRepository, RegionRepository>();
+//Aggiunto per il progetto NZWalks
+builder.Services.AddScoped<IWalkRepository, WalkRepository>();
+//Aggiunto per il progetto NZWalks
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
