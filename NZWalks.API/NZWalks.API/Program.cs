@@ -23,6 +23,9 @@ builder.Services.AddScoped<IRegionRepository, RegionRepository>();
 //Aggiunto per il progetto NZWalks
 builder.Services.AddScoped<IWalkRepository, WalkRepository>();
 //Aggiunto per il progetto NZWalks
+builder.Services.AddScoped<IWalkDifficultyRepository, WalkDifficultyRepository>();
+
+//Aggiunto per il progetto NZWalks
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
