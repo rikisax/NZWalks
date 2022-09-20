@@ -98,10 +98,11 @@ namespace NZWalks.API.Controllers
         [HttpPost]
         public async Task<IActionResult>  AddRegionAsync(Models.DTO.AddRegionRequest addRegionRequest)
         {
-            //Validate this request
-            if (!ValidateAddRegionAsync(addRegionRequest)) {
-                return BadRequest(ModelState);
-            }
+            ////Validate this request (senza FluidValidation)
+            //if (!ValidateAddRegionAsync(addRegionRequest)) {
+            //    return BadRequest(ModelState);
+            //}
+
             //Request to Domain model
             //metodo convenzionale senza il mapper.
             var region = new Models.Domain.Region()
